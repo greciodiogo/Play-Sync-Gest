@@ -19,9 +19,9 @@ const routes: Routes = [
           import('./pages/pages.module').then((m) => m.PagesModule),
       },
       {
-        path: 'deposits',
+        path: 'deposit',
         loadChildren: () =>
-          import('./pages/deposits.module').then((m) => m.DepositsModule),
+          import('./pages/deposits/deposits.module').then((m) => m.DepositModule),
       },
       {
         path: 'withdraws',
@@ -66,6 +66,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+exports: [RouterModule],
 })
 export class AppRoutingModule {}

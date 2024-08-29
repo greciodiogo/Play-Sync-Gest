@@ -130,7 +130,7 @@ const ELEMENT_DATA: productsData[] = [
   templateUrl: './deposits.component.html',
   encapsulation: ViewEncapsulation.None,
 })
-export class AppDepositsComponent {
+export class AppDepositComponent {
   @ViewChild('chart') chart: ChartComponent = Object.create(null);
 
   public salesOverviewChart!: Partial<salesOverviewChart> | any;

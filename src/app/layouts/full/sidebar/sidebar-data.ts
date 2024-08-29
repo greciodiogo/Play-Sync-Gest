@@ -10,9 +10,9 @@ export const navItems: NavItem[] = [
     route: '/dashboard',
   },
   {
-    displayName: 'Depósitos',
+    displayName: 'Dépositos',
     iconName: 'aperture',
-    route: '/deposits',
+    route: '/deposit',
   },
   {
     displayName: 'Levantamentos',
