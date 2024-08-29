@@ -24,6 +24,11 @@ const routes: Routes = [
           import('./pages/deposits.module').then((m) => m.DepositsModule),
       },
       {
+        path: 'withdraws',
+        loadChildren: () =>
+          import('./pages/withdraw/withdraw.module').then((m) => m.WithdrawModule),
+      },
+      {
         path: 'ui-components',
         loadChildren: () =>
           import('./pages/ui-components/ui-components.module').then(
