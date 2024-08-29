@@ -19,6 +19,11 @@ const routes: Routes = [
           import('./pages/pages.module').then((m) => m.PagesModule),
       },
       {
+        path: 'deposits',
+        loadChildren: () =>
+          import('./pages/deposits.module').then((m) => m.DepositsModule),
+      },
+      {
         path: 'ui-components',
         loadChildren: () =>
           import('./pages/ui-components/ui-components.module').then(
