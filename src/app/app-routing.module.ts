@@ -25,6 +25,13 @@ const routes: Routes = [
             (m) => m.UicomponentsModule
           ),
       },
+      // {
+      //   path: 'deposits',
+      //   loadChildren: () =>
+      //     import('./pages/ui-components/ui-components.module').then(
+      //       (m) => m.UicomponentsModule
+      //     ),
+      // },
       {
         path: 'extra',
         loadChildren: () =>

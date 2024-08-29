@@ -228,12 +228,12 @@ export class AppDashboardComponent {
         {
           name: 'Eanings this month',
           data: [355, 390, 300, 350, 390, 180, 355, 390],
-          color: '#5D87FF',
+          color: '#771F98',
         },
         {
           name: 'Expense this month',
           data: [280, 250, 325, 215, 250, 310, 280, 250],
-          color: '#49BEFF',
+          color: '#711F18',
         },
       ],
 
@@ -323,7 +323,7 @@ export class AppDashboardComponent {
         },
         height: 130,
       },
-      colors: ['#5D87FF', '#ECF2FF', '#F9F9FD'],
+      colors: ['#771F98', '#ECF2FF', '#F9F9FD'],
       plotOptions: {
         pie: {
           startAngle: 0,
@@ -363,7 +363,7 @@ export class AppDashboardComponent {
       series: [
         {
           name: '',
-          color: '#49BEFF',
+          color: '#771F98',
           data: [25, 66, 20, 40, 12, 58, 20],
         },
       ],

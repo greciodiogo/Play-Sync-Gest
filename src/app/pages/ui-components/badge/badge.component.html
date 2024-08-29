@@ -24,7 +24,7 @@
       <mat-card-content>
         <p class="f-w-500 text-muted">
           Button with a badge on the left
-          <button mat-flat-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+          <button mat-flat-button class="btnActived" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
             Action
           </button>
         </p>
@@ -44,7 +44,7 @@
       <mat-card-content>
         <p>
           Button toggles badge visibility
-          <button mat-flat-button color="primary" matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+          <button mat-flat-button class="btnActived" matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
             Hide
           </button>
         </p>

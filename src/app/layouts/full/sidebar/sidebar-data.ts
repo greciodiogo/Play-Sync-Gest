@@ -10,6 +10,31 @@ export const navItems: NavItem[] = [
     route: '/dashboard',
   },
   {
+    displayName: 'Depósitos',
+    iconName: 'aperture',
+    route: '/deposits',
+  },
+  {
+    displayName: 'Levantamentos',
+    iconName: 'layout-navbar-expand',
+    route: '/withdraws',
+  },
+  {
+    displayName: 'Finanças',
+    iconName: 'poker-chip',
+    route: '/finance',
+  },
+  {
+    displayName: 'Actividade Suspeita',
+    iconName: 'lock',
+    route: '/finance',
+  },
+  {
+    displayName: 'Gestão Usuário',
+    iconName: 'list',
+    route: '/withdraws',
+  },
+  {
     navCap: 'Ui Components',
   },
   {
