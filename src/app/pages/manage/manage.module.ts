@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { PagesRoutes } from './pages.routing.module';
-import { MaterialModule } from '../material.module';
+import { PagesRoutes } from '../pages.routing.module';
+import { MaterialModule } from '../../material.module';
 import { FormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
 // icons
 import { TablerIconsModule } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
-import { AppDepositsComponent } from './deposits/deposits.component';
+import { AppManageComponent } from './manage.component';
 
 @NgModule({
-  declarations: [ AppDepositsComponent],
+  declarations: [ AppManageComponent],
   imports: [
     CommonModule,
     MaterialModule,
@@ -22,4 +22,4 @@ import { AppDepositsComponent } from './deposits/deposits.component';
   ],
   exports: [TablerIconsModule],
 })
-export class DepositsModule {}
+export class ManageModule {}

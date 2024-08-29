@@ -126,11 +126,11 @@ const ELEMENT_DATA: productsData[] = [
 ];
 
 @Component({
-  selector: 'app-deposits',
-  templateUrl: './deposits.component.html',
+  selector: 'app-manage',
+  templateUrl: './manage.component.html',
   encapsulation: ViewEncapsulation.None,
 })
-export class AppDepositComponent {
+export class AppManageComponent {
   @ViewChild('chart') chart: ChartComponent = Object.create(null);
 
   public salesOverviewChart!: Partial<salesOverviewChart> | any;
