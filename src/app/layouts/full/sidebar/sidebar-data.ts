@@ -34,19 +34,19 @@ export const navItems: NavItem[] = [
     iconName: 'list',
     route: '/user-manage',
   },
-  // {
-  //   navCap: 'Ui Components',
-  // },
-  // {
-  //   displayName: 'Badge',
-  //   iconName: 'rosette',
-  //   route: '/ui-components/badge',
-  // },
-  // {
-  //   displayName: 'Chips',
-  //   iconName: 'poker-chip',
-  //   route: '/ui-components/chips',
-  // },
+  {
+    navCap: 'Utilitários',
+  },
+  {
+    displayName: 'Reltórios',
+    iconName: 'rosette',
+    route: '/ui-/badge',
+  },
+  {
+    displayName: 'Configurações',
+    iconName: 'tooltip',
+    route: '/ui-',
+  },
   // {
   //   displayName: 'Lists',
   //   iconName: 'list',

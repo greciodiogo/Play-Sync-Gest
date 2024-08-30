@@ -31,11 +31,11 @@
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  .flex-sm-row {
-    flex-direction: row !important;
-  }
-}
+// @media (min-width: 768px) {
+//   .flex-sm-row {
+//     flex-direction: row !important;
+//   }
+// }
 
 .flex-column {
   flex-direction: column;
