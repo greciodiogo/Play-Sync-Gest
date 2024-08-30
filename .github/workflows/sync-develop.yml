@@ -1,0 +1,33 @@
+name: Sync Develop with Master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  sync_develop:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Master
+        uses: actions/checkout@v3
+        with:
+          ref: master
+
+      - name: Set up Git
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+
+      - name: Checkout Develop
+        run: git checkout develop
+
+      - name: Merge Master into Develop
+        run: git merge master --no-ff
+
+      - name: Push Changes
+        run: |
+          git push origin develop
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
