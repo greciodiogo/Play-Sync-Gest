@@ -11,14 +11,21 @@ jobs:
 
     steps:
       - name: Checkout Master
-        uses: actions/checkout@v3
-        with:
-          ref: master
+        uses: actions/checkout@v3  # Continua a usar v3, que será automaticamente compatível com Node.js 20
 
       - name: Set up Git
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
+
+      - name: Create develop branch if it doesn't exist
+        run: |
+          if git show-ref --verify --quiet refs/heads/develop; then
+            echo "Branch develop already exists."
+          else
+            git checkout -b develop
+            git push origin develop
+          fi
 
       - name: Checkout Develop
         run: git checkout develop
