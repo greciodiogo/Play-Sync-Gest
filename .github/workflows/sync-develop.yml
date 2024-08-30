@@ -18,7 +18,7 @@ jobs:
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
 
-      - name: Create develop branch if it doesn't exist
+      - name: Create or Checkout Develop Branch
         run: |
           if git show-ref --verify --quiet refs/heads/develop; then
             git checkout develop
@@ -27,12 +27,11 @@ jobs:
             git checkout -b develop
           fi
 
-      - name: Merge Master into Develop
-        run: git merge master --no-ff
-
-      - name: Push Changes with Force (fast-forward only)
+      - name: Merge Master into Develop with conflict resolution
         run: |
-          git pull origin develop --rebase
-          git push origin develop
+          git merge master --no-ff || git merge --strategy-option theirs
+
+      - name: Push Changes to Develop
+        run: git push origin develop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
