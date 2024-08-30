@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout Master
-        uses: actions/checkout@v3  # Continua a usar v3, que será automaticamente compatível com Node.js 20
+        uses: actions/checkout@v3
 
       - name: Set up Git
         run: |
@@ -21,20 +21,16 @@ jobs:
       - name: Create develop branch if it doesn't exist
         run: |
           if git show-ref --verify --quiet refs/heads/develop; then
-            echo "Branch develop already exists."
+            git checkout develop
+            git pull origin develop
           else
             git checkout -b develop
-            git push origin develop
           fi
-
-      - name: Checkout Develop
-        run: git checkout develop
 
       - name: Merge Master into Develop
         run: git merge master --no-ff
 
       - name: Push Changes
-        run: |
-          git push origin develop
+        run: git push origin develop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
