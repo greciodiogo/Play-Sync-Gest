@@ -30,7 +30,9 @@ jobs:
       - name: Merge Master into Develop
         run: git merge master --no-ff
 
-      - name: Push Changes
-        run: git push origin develop
+      - name: Push Changes with Force (fast-forward only)
+        run: |
+          git pull origin develop --rebase
+          git push origin develop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
